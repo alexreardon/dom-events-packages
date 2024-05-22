@@ -3,7 +3,7 @@
   "version": "3.0.0",
   "private": false,
   "type": "module",
-  "description": "Making binding and unbinding DOM events easier",
+  "description": "Safe binding and unbinding DOM events",
   "author": "Alex Reardon <alexreardon@gmail.com>",
   "license": "MIT",
   "repository": {
@@ -11,10 +11,12 @@
     "url": "https://github.com/alexreardon/bind-event-listener.git"
   },
   "keywords": [
+    "event listener",
+    "event handler",
+    "dom events",
     "dom",
     "ui",
-    "event listener",
-    "event handler"
+    "bind"
   ],
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -24,7 +26,7 @@
   },
   "sideEffects": false,
   "config": {
-    "prettier_target": "src/**/*.{ts,js,jsx,md,json} test/**/*.{ts,js,jsx,md,json}"
+    "prettier_target": "src/**/*.ts test/**/*.ts"
   },
   "files": [
     "/dist",

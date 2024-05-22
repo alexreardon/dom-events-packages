@@ -1,3 +1,4 @@
+/** @type {import('jest').Config} */
 module.exports = {
   preset: 'ts-jest',
   testEnvironment: 'jsdom',
@@ -6,10 +7,4 @@ module.exports = {
   // node_modules is default.
   // testPathIgnorePatterns: ['/node_modules/', '/cypress/'],
   modulePathIgnorePatterns: ['/dist/'],
-
-  globals: {
-    'ts-jest': {
-      diagnostics: false,
-    },
-  },
 };

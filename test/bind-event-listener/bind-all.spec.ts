@@ -1,4 +1,4 @@
-import { bindAll, UnbindFn } from '../../src';
+import { bindAll, type UnbindFn } from '../../src';
 
 it('should allow for multiple bindings of different types', () => {
   const button: HTMLElement = document.createElement('button');

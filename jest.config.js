@@ -1,5 +1,5 @@
 /** @type {import('jest').Config} */
-module.exports = {
+const config = {
   preset: 'ts-jest',
   testEnvironment: 'jsdom',
   // setupFiles: ['./test/env-setup.ts'],
@@ -8,3 +8,4 @@ module.exports = {
   // testPathIgnorePatterns: ['/node_modules/', '/cypress/'],
   modulePathIgnorePatterns: ['/dist/'],
 };
+export default config;

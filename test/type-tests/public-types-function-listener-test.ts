@@ -1,6 +1,6 @@
 import { expectTypeOf } from 'expect-type';
-import { Binding, Listener } from '../../src';
-import { expectType, TypeOf } from 'ts-expect';
+import type { Binding, Listener } from '../../src';
+import { expectType, type TypeOf } from 'ts-expect';
 
 // This is how you can 'teach' TS about your custom event
 declare global {

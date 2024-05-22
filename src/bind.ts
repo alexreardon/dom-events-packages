@@ -1,4 +1,4 @@
-import { UnbindFn, InferEventType, Binding } from './types';
+import type { UnbindFn, InferEventType, Binding } from './types';
 
 export function bind<
   TTarget extends EventTarget,

@@ -3,7 +3,7 @@
   "version": "3.0.0",
   "private": false,
   "type": "module",
-  "description": "Safe binding and unbinding DOM events",
+  "description": "Safe DOM Event binding and unbinding",
   "author": "Alex Reardon <alexreardon@gmail.com>",
   "license": "MIT",
   "repository": {

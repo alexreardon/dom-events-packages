@@ -18,12 +18,9 @@
     "ui",
     "bind"
   ],
-  "module": "./dist/index.js",
-  "types": "./dist/index.d.ts",
-  "exports": {
-    ".": "./dist/index.js",
-    "./types": "./dist/index.d.ts"
-  },
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/esm/index.d.ts",
   "sideEffects": false,
   "config": {
     "prettier_target": "src/**/*.ts test/**/*.ts"
@@ -41,7 +38,9 @@
   "scripts": {
     "typescript:check": "tsc --noEmit && tsc --noEmit --project ./test/tsconfig.json",
     "typescript:watch": "tsc --watch",
-    "typescript:build": "tsc",
+    "typescript:build": "yarn typescript:build:esm && yarn typescript:build:cjs",
+    "typescript:build:esm": "tsc",
+    "typescript:build:cjs": "tsc --project ./tsconfig.cjs.json",
     "prettier:check": "prettier --debug-check $npm_package_config_prettier_target",
     "prettier:write": "prettier --write $npm_package_config_prettier_target",
     "validate": "yarn typescript:check && yarn prettier:check",

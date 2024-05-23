@@ -19,8 +19,8 @@
     "bind"
   ],
   "sideEffects": false,
-  "types": "./dist/esm/index.d.ts",
-  "exports": "./dist/esm/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": "./dist/index.js",
   "config": {
     "prettier_target": "src/**/*.ts test/**/*.ts"
   },
@@ -30,11 +30,11 @@
   ],
   "size-limit": [
     {
-      "path": "./dist/esm/bind.js",
+      "path": "./dist/bind.js",
       "limit": "95B"
     },
     {
-      "path": "./dist/esm/bind-all.js",
+      "path": "./dist/bind-all.js",
       "limit": "211B"
     }
   ],
@@ -44,8 +44,7 @@
   "scripts": {
     "build": "yarn build:clean && yarn build:dist && yarn build:types",
     "build:clean": "rimraf dist",
-    "build:dist": "esbuild ./src/* --outdir=./dist --format=esm",
-    "build:types": "tsc",
+    "build:dist": "tsc",
     "check": "yarn check:typescript && yarn check:prettier",
     "check:prettier": "prettier --debug-check $npm_package_config_prettier_target",
     "check:typescript": "tsc --noEmit && tsc --noEmit --project ./test/tsconfig.json",
@@ -59,7 +58,6 @@
     "@size-limit/preset-small-lib": "^8.2.4",
     "@types/jest": "^29.5.1",
     "@types/node": "^18.16.0",
-    "esbuild": "^0.21.3",
     "expect-type": "^0.15.0",
     "jest": "^29.5.0",
     "jest-environment-jsdom": "^29.5.0",

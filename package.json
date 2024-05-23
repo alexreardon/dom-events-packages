@@ -31,8 +31,12 @@
   ],
   "size-limit": [
     {
-      "path": "./dist/index.js",
-      "limit": "212B"
+      "path": "./dist/esm/bind.js",
+      "limit": "95B"
+    },
+    {
+      "path": "./dist/esm/bind-all.js",
+      "limit": "211B"
     }
   ],
   "scripts": {

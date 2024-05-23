@@ -18,10 +18,13 @@
     "ui",
     "bind"
   ],
+  "sideEffects": false,
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
   "types": "./dist/esm/index.d.ts",
-  "sideEffects": false,
+  "exports": {
+    ".": "./dist/esm/index.js"
+  },
   "config": {
     "prettier_target": "src/**/*.ts test/**/*.ts"
   },

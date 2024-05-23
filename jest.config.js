@@ -1,6 +1,14 @@
 /** @type {import('jest').Config} */
 const config = {
-  preset: 'ts-jest',
+  // preset: 'ts-jest',
+  transform: {
+    '^.+\\.tsx?$': [
+      'ts-jest',
+      {
+        tsconfig: './test/tsconfig.json',
+      },
+    ],
+  },
   testEnvironment: 'jsdom',
   // setupFiles: ['./test/env-setup.ts'],
   setupFilesAfterEnv: ['./test/test-setup.ts'],

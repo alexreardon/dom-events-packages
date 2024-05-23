@@ -42,7 +42,7 @@
     "node": ">=18"
   },
   "scripts": {
-    "build": "yarn build:clean && yarn build:dist && yarn build:types",
+    "build": "yarn build:clean && yarn build:dist",
     "build:clean": "rimraf dist",
     "build:dist": "tsc",
     "check": "yarn check:typescript && yarn check:prettier",

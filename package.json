@@ -2,14 +2,9 @@
   "name": "bind-event-listener",
   "version": "3.0.0",
   "private": false,
-  "type": "module",
   "description": "Safe DOM Event binding and unbinding",
   "author": "Alex Reardon <alexreardon@gmail.com>",
   "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/alexreardon/bind-event-listener.git"
-  },
   "keywords": [
     "event listener",
     "event handler",
@@ -18,7 +13,12 @@
     "ui",
     "bind"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alexreardon/bind-event-listener.git"
+  },
   "sideEffects": false,
+  "type": "module",
   "types": "./dist/index.d.ts",
   "exports": "./dist/index.js",
   "config": {

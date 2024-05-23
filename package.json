@@ -19,12 +19,9 @@
     "bind"
   ],
   "sideEffects": false,
-  "main": "./dist/cjs/index.js",
+  "main": "./dist/esm/index.js",
   "module": "./dist/esm/index.js",
   "types": "./dist/esm/index.d.ts",
-  "exports": {
-    ".": "./dist/esm/index.js"
-  },
   "config": {
     "prettier_target": "src/**/*.ts test/**/*.ts"
   },
@@ -46,10 +43,9 @@
     "node": ">=18"
   },
   "scripts": {
-    "build": "yarn build:esm && yarn build:cjs && yarn build:types",
+    "build": "yarn build:clean && yarn build:dist && yarn build:types",
     "build:clean": "rimraf dist",
-    "build:esm": "esbuild ./src/* --outdir=./dist/esm --format=esm",
-    "build:cjs": "esbuild ./src/* --outdir=./dist/cjs --format=cjs",
+    "build:dist": "esbuild ./src/* --outdir=./dist --format=esm",
     "build:types": "tsc",
     "check": "yarn check:typescript && yarn check:prettier",
     "check:prettier": "prettier --debug-check $npm_package_config_prettier_target",

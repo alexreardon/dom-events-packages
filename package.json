@@ -20,9 +20,7 @@
   ],
   "sideEffects": false,
   "types": "./dist/esm/index.d.ts",
-  "exports": {
-    ".": "./dist/esm/index.js"
-  },
+  "exports": "./dist/esm/index.js",
   "config": {
     "prettier_target": "src/**/*.ts test/**/*.ts"
   },

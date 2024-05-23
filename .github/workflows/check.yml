@@ -34,4 +34,4 @@ jobs:
 
       # Validates project
       - name: Typescript, prettier checks
-        run: yarn validate
+        run: yarn check

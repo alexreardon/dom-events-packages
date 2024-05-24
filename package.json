@@ -49,9 +49,10 @@
     "node": ">=18"
   },
   "scripts": {
-    "build": "yarn build:clean && yarn build:dist",
+    "build": "yarn build:clean && yarn build:dist:esm && yarn build:dist:cjs",
     "build:clean": "rimraf dist",
-    "build:dist": "tsc && tsc --project tsconfig.cjs.json",
+    "build:dist:esm": "tsc",
+    "build:dist:cjs": "esbuild ./src/* --outdir=./dist/cjs --format=cjs --out-extension:.js=.cjs",
     "check": "yarn check:typescript && yarn check:prettier",
     "check:prettier": "prettier --debug-check $npm_package_config_prettier_target",
     "check:typescript": "tsc --noEmit && tsc --noEmit --project ./test/tsconfig.json",
@@ -65,6 +66,7 @@
     "@size-limit/preset-small-lib": "^8.2.4",
     "@types/jest": "^29.5.1",
     "@types/node": "^18.16.0",
+    "esbuild": "^0.21.3",
     "expect-type": "^0.15.0",
     "jest": "^29.5.0",
     "jest-environment-jsdom": "^29.5.0",

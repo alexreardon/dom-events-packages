@@ -20,12 +20,8 @@
   "sideEffects": false,
   "type": "module",
   "exports": {
-    "import": {
-      ".": "./dist/esm/index.js"
-    },
-    "require": {
-      ".": "./dist/cjs/index.cjs"
-    },
+    "import": "./dist/esm/index.js",
+    "require": "./dist/cjs/index.cjs",
     "types": "./dist/esm/index.d.ts"
   },
   "config": {
@@ -37,11 +33,11 @@
   ],
   "size-limit": [
     {
-      "path": "./dist/bind.js",
+      "path": "./dist/esm/bind.js",
       "limit": "95B"
     },
     {
-      "path": "./dist/bind-all.js",
+      "path": "./dist/esm/bind-all.js",
       "limit": "211B"
     }
   ],

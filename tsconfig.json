@@ -14,7 +14,7 @@
     "noImplicitOverride": true,
     /* If transpiling with TypeScript: */
     "module": "es2022",
-    "outDir": "dist",
+    "outDir": "dist/esm",
     /* AND if you're building for a library: */
     "declaration": true,
     /* If your code runs in the DOM: */

@@ -19,8 +19,15 @@
   },
   "sideEffects": false,
   "type": "module",
-  "types": "./dist/index.d.ts",
-  "exports": "./dist/index.js",
+  "exports": {
+    "import": {
+      ".": "./dist/esm/index.js"
+    },
+    "require": {
+      ".": "./dist/cjs/index.cjs"
+    },
+    "types": "./dist/esm/index.d.ts"
+  },
   "config": {
     "prettier_target": "src/**/*.ts test/**/*.ts"
   },
@@ -44,7 +51,7 @@
   "scripts": {
     "build": "yarn build:clean && yarn build:dist",
     "build:clean": "rimraf dist",
-    "build:dist": "tsc",
+    "build:dist": "tsc && tsc --project tsconfig.cjs.json",
     "check": "yarn check:typescript && yarn check:prettier",
     "check:prettier": "prettier --debug-check $npm_package_config_prettier_target",
     "check:typescript": "tsc --noEmit && tsc --noEmit --project ./test/tsconfig.json",

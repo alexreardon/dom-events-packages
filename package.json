@@ -19,6 +19,7 @@
   },
   "sideEffects": false,
   "type": "module",
+  "main": "./dist/index.cjs",
   "exports": {
     "types": {
       "import": "./dist/index.d.js",
@@ -54,7 +55,7 @@
     "check": "yarn check:typescript && yarn check:prettier && yarn check:dist",
     "check:prettier": "prettier --debug-check $npm_package_config_prettier_target",
     "check:typescript": "tsc --noEmit && tsc --noEmit --project ./test/tsconfig.json",
-    "check:dist": "attw --pack . --ignore-rules no-resolution",
+    "check:dist": "attw --pack .",
     "prettier:write": "prettier --write $npm_package_config_prettier_target",
     "test": "yarn jest",
     "test:size": "size-limit",

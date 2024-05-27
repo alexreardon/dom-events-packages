@@ -33,5 +33,5 @@ jobs:
         run: yarn install
 
       # Validates project
-      - name: Typescript, prettier checks
+      - name: Typescript, prettier, dist checks
         run: yarn check

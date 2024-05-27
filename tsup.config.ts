@@ -17,6 +17,7 @@ export default defineConfig({
         if (this.format === 'cjs') {
           const regex = /require\("(?<import>\.\/.+)"\)/g;
           // TODO: should do nothing if file already ends in .cjs
+          // TODO: could be more resilient for `"` vs `'` imports
           return { code: code.replace(regex, "require('$<import>.cjs')") };
         }
       },

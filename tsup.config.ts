@@ -16,6 +16,7 @@ export default defineConfig({
       renderChunk(_, { code }) {
         if (this.format === 'cjs') {
           const regex = /require\("(?<import>\.\/.+)"\)/g;
+          // TODO: should do nothing if file already ends in .cjs
           return { code: code.replace(regex, "require('$<import>.cjs')") };
         }
       },

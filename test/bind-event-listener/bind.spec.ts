@@ -1,4 +1,4 @@
-import { UnbindFn } from '../../src/types';
+import type { UnbindFn } from '../../src/types';
 import { bind } from '../../src';
 
 it('should bind a listener', () => {

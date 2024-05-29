@@ -22,8 +22,8 @@
   "main": "./dist/index.cjs",
   "exports": {
     "types": {
-      "import": "./dist/index.d.js",
-      "require": "./dist/index.d.cjs"
+      "import": "./dist/index.d.ts",
+      "require": "./dist/index.d.cts"
     },
     "import": "./dist/index.js",
     "require": "./dist/index.cjs"
